@@ -27,10 +27,10 @@
 		$counter = count($matches[1], COUNT_RECURSIVE);
 
 		for ($i=0; $i<$counter-1; $i++) {
-			file_put_contents("/Applications/MAMP/htdocs/p2/wordlists/notreallyrudewords.txt", strtolower($matches[1][$i])."\n", FILE_APPEND);
+			file_put_contents("/Applications/MAMP/htdocs/p2/wordlists/notreallyrudewords.txt", mb_strtolower($matches[1][$i], "UTF-8")."\n", FILE_APPEND);
 		}
 
-		file_put_contents("/Applications/MAMP/htdocs/p2/wordlists/notreallyrudewords.txt", strtolower($matches[1][$i]), FILE_APPEND);
+		file_put_contents("/Applications/MAMP/htdocs/p2/wordlists/notreallyrudewords.txt", mb_strtolower($matches[1][$i], "UTF-8"), FILE_APPEND);
 	?>
 
 </body>
